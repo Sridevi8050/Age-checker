@@ -1,33 +1,97 @@
-*{
-    margin: 0 ;
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-h1{
-    color: rgb(11, 6, 15);
+
+body {
+    font-family: Arial, sans-serif;
 }
-.age{
-    color: rgb(166, 125, 205);
-    padding-left: 450px;
-    padding-top: 50px;
-}
-.navbar{
+
+/* Navbar Styling */
+.navbar {
     font-style: italic;
     background-color: rgb(180, 146, 212);
     height: 70px;
-}
-.navheading{
-
-    font-family: Snell Roundhand, cursive;
-    font-size:40px ;
-    padding-left: 450px;
-}
- .innerdiv{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Navbar Heading */
+.navheading {
+    font-family: 'Snell Roundhand', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Age Section */
+.age {
+    color: rgb(166, 125, 205);
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Responsive Inner Div */
+.innerdiv {
+    display: flex;
     align-items: center;
-    position: relative ;
-    left: 480px;
-    top: 100px;
-} 
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .navheading {
+        font-size: 32px;
+        padding-left: 0;
+    }
+    
+    .innerdiv {
+        flex-direction: column;
+        text-align: center;
+        left: 0;
+        top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .navheading {
+        font-size: 28px;
+    }
+
+    .age {
+        padding-left: 0;
+    }
+
+    .innerdiv {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 50px;
+    }
+
+    .navheading {
+        font-size: 24px;
+    }
+
+    .age {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+
+    .innerdiv {
+        padding: 20px;
+    }
+}
